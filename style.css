@@ -724,7 +724,8 @@ footer#colophon .widget ul li {
 .entry-content{
 	margin-left:132px;	
 }
-.page .entry-content{
+.page .entry-content,
+.single .entry-content{
 	margin:0;
 }
 .page-template-template-no-sidebar-php .entry-content,
@@ -838,6 +839,13 @@ img, .hentry div {
 /*
 	 ==Custom Post formats 
 */
+/*
+	==Gallery
+*/
+.format-gallery .entry-content{
+	background-color: #000;
+	padding:1em;
+}
 /* 
 	==QUOTE 
 */

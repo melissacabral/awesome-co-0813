@@ -7,7 +7,7 @@
 		while( have_posts() ):
 		the_post(); ?>
 	
-        <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix something'); ?>>
+        <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
             <h2 class="entry-title"> <a href="<?php the_permalink(); ?>"> 
 				<?php the_title(); ?> 
 			</a></h2>
@@ -29,7 +29,7 @@
             <div class="entry-content">
                 <?php 
                 //show full length content on single posts or pages, otherwise, show short content (excerpt)
-                if( is_single() OR is_page() ):
+        if( is_single() OR is_page() OR has_post_format( 'gallery' ) ):
                     the_content(); 
                 else:
                     the_excerpt();
