@@ -1,6 +1,11 @@
 </div><!-- end wrapper -->
 
 <footer class="clearfix" id="colophon" role="contentinfo">
+
+	<div class="widget-container">
+		//footer menu here!
+	</div>
+	
     <div class="widget-container">        
         &copy; 2013 <?php bloginfo('name'); ?>        
     </div>

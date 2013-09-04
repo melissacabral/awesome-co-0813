@@ -54,3 +54,9 @@ wp_head();  ?>
 		the_post_thumbnail( 'awesome-interior-banner' );
 	endif;
 	 ?>
+
+	 <?php //breadcrumbs
+	 if(function_exists('dimox_breadcrumbs')):
+	 	dimox_breadcrumbs();
+	 endif; 
+	 ?>

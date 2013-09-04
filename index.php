@@ -43,8 +43,16 @@
 	          
         
         <div id="nav-below" class="pagination"> 
+            <?php 
+            //use the pagenavi plugin only if it exists (plugin is installed and active)
+            if(function_exists('wp_pagenavi')){
+                wp_pagenavi();
+            }else{
+             ?>
         	<span class="older"><?php next_posts_link('&laquo; Older Posts'); ?></span>
             <span class="newer"><?php previous_posts_link('Newer posts &raquo;');?></span>
+            <?php } ?>
+    
         </div><!-- end #nav-below --> 
         
     </div><!-- end content -->
