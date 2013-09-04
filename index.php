@@ -27,14 +27,7 @@
             <?php the_post_thumbnail('thumbnail', array( 'class' => 'thumb' ) ); ?>         
             
             <div class="entry-content">
-                <?php 
-                //show full length content on single posts or pages, otherwise, show short content (excerpt)
-        if( is_single() OR is_page() OR has_post_format( 'gallery' ) ):
-                    the_content(); 
-                else:
-                    the_excerpt();
-                endif;
-                ?>
+                <?php awesome_content(); ?>
             </div>
        
         

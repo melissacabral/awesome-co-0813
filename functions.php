@@ -15,4 +15,36 @@ add_theme_support( 'post-formats',
 add_image_size( 'awesome-home-banner', 960, 330, true );
 add_image_size( 'awesome-interior-banner', 960, 113, true );
 
+//change the default excerpt length
+function awesome_excerpt_length(){
+	return 25; //words
+}
+add_filter( 'excerpt_length', 'awesome_excerpt_length' );
+
+//change the [...] at the end of excerpts
+function awesome_readmore(){
+	return '<a href="' . get_permalink() . '" class="readmore">Read More</a>';
+}
+add_filter( 'excerpt_more', 'awesome_readmore' );
+
+//improve UX when replying to comments
+function awesome_comment_reply(){
+	if( is_singular() AND comments_open() AND get_option('thread_comments') ):
+		wp_enqueue_script( 'comment-reply' );
+	endif;
+}
+add_action( 'wp_print_scripts', 'awesome_comment_reply' );
+
+/**
+ * Helper Function for showing content on any view.
+ * will show excerpts on all archives of the blog
+ * @since 0.1
+ */
+function awesome_content(){
+	if( is_single() OR is_page() OR has_post_format( 'gallery' ) ):
+		the_content(); 
+	else:
+		the_excerpt();
+	endif;
+}
 //don't close PHP
