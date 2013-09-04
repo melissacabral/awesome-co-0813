@@ -47,4 +47,20 @@ function awesome_content(){
 		the_excerpt();
 	endif;
 }
-//don't close PHP
+
+/**
+ * Add Menu Area Support
+ */
+add_action('init', 'awesome_menu_areas');
+function awesome_menu_areas(){
+	register_nav_menus( array(
+		'main_menu' => 'Top Navigation Bar',
+		'utility_menu' => 'Utility Area',
+		'footer_menu' => 'Footer Menu Area',
+		) );
+}
+
+
+
+
+ //don't close PHP

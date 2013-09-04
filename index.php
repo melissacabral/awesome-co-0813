@@ -43,8 +43,8 @@
 	          
         
         <div id="nav-below" class="pagination"> 
-        	<?php //TODO: Make pagination functional ?>
-            <a href="/blog/page/2/" >&larr; View Older Posts</a> 
+        	<span class="older"><?php next_posts_link('&laquo; Older Posts'); ?></span>
+            <span class="newer"><?php previous_posts_link('Newer posts &raquo;');?></span>
         </div><!-- end #nav-below --> 
         
     </div><!-- end content -->

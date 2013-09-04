@@ -33,15 +33,17 @@ wp_head();  ?>
 		
 		<?php get_search_form(); ?>
 		
-		<ul class="utilities">
-		   <?php wp_list_pages('title_li=&include=2,146'); ?>
-		</ul>
+		<?php wp_nav_menu( array(
+			'theme_location' => 'utility_menu',
+			'container' => 'false',
+			'menu_class' => 'utilities',
+		) ); ?>
 		
-		<nav>
-		  <ul>
-			 <?php wp_list_pages('title_li=&exclude=2,146'); ?>
-		  </ul>
-		</nav>
+		
+		<?php wp_nav_menu( array(
+			'theme_location' => 'main_menu',
+			'container' => 'nav',
+		) ); ?>
 	</header>    <!-- end header -->
 
 	<?php 
