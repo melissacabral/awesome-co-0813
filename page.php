@@ -29,5 +29,7 @@
         
     </div><!-- end content -->
     
-<?php get_sidebar(); ?> 
+<?php 
+//include sidebar-page.php
+get_sidebar( 'page' ); ?> 
 <?php get_footer(); ?>  

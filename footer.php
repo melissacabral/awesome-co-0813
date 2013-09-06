@@ -2,6 +2,8 @@
 
 <footer class="clearfix" id="colophon" role="contentinfo">
 
+	<?php dynamic_sidebar( 'footer-area' ); ?>
+
 	<div class="widget-container">
 		//footer menu here!
 	</div>

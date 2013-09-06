@@ -554,10 +554,6 @@ footer#colophon .widget {
 	float:left;
 	font-size:.75em !important;
 }
-footer#colophon .widget > * {
-	margin-left:10px;
-	margin-right:10px;
-}
 footer#colophon .widget ul li {
 	font-size:inherit;
 }
@@ -565,10 +561,10 @@ footer#colophon .widget ul li {
 	margin:0;
 }
 .home #sidebar .widget {
-	width:33.3%;
+	width:29.3%;
 	float:left;
-	margin:0;
-	padding:0;
+	margin:2em 0 0 0;
+	padding-right:4%;
 }
 .home #sidebar .widget-recent-post-thumbs {
 	width:564px;
