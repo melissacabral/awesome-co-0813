@@ -2,7 +2,7 @@
     
     <div id="content">
 
-    <h2 class="archive-title"><?php post_type_archive_title(); ?></h2>
+    <h2 class="archive-title">All Products Featuring <?php single_cat_title(); ?></h2>
 	<?php 
 	//THE LOOP.
 	if( have_posts() ): 

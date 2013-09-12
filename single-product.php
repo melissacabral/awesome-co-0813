@@ -17,13 +17,20 @@
             <div class="entry-content">
             	<?php //the_meta(); //show a list of all custom fields ?>
 
-            	<strong>Price: 
-            	<?php 
-            	//get just one key from the custom fields
-            	echo get_post_meta( $post->ID, 'price', true ); ?>
-          	   </strong>
+          	<strong>Price: 
+          	<?php 
+          	//get just one key from the custom fields
+          	echo get_post_meta( $post->ID, 'price', true ); ?>
+        	   </strong>
+             <?php 
+             //show a list of all terms in the brand taxonomy, separated by commas
+             the_terms( $post->ID, 'brand', '<p>Brand: ', ', ', '</p>' ); ?>
 
-                <?php the_content(); ?>
+             <?php 
+              //show a list of all terms in the features taxonomy, separated by break tags
+             the_terms( $post->ID, 'feature', '<p>Features:<br>', '<br>', '</p>' ); ?>
+
+             <?php the_content(); ?>
             </div>
        
        <div class="pagination">
@@ -43,5 +50,5 @@
         
     </div><!-- end content -->
     
-<?php get_sidebar(); ?> 
+<?php get_sidebar('shop'); ?> 
 <?php get_footer(); ?>  
