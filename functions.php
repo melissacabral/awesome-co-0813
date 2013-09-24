@@ -1,7 +1,11 @@
 <?php 
+//max width for oEmbeds
+if ( ! isset( $content_width ) ) $content_width = 700;
+
 //activate post featured images
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'custom-background' );
+add_theme_support( 'automatic-feed-links' );
 
 //gives you the ability to add editor-style.css to control the edit screen
 add_editor_style();

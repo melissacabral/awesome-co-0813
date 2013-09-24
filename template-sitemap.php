@@ -45,9 +45,9 @@ Will automatically generate a sitemap using all pages, posts and categories on y
 
                     <h3>Blog Categories:</h3>
                     <ul>
-                        <?php wp_list_categories( array(
-                            'title_li' => '',
-        'feed_image' => get_bloginfo( 'template_directory' ) . '/images/icon_feed.png',
+                        <?php 
+                        wp_list_categories( array(
+                            'title_li' => ''
                         ) ); ?>
                     </ul>
                 </div>                
